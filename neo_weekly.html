@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="keywords"
+		content="pet, cat, stray, dog, pet lovers, cat lovers, Neo">
+	<link href="design.css" rel="stylesheet">
+	<link href="format.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Space+Mono&display=swap" rel="stylesheet">
+	<title>Weekly Feeture</title>
+</head>
+<body>
+	
+		<header>
+		<nav class="navbar">
+		<ul style="list-style-type: none;">
+			<li><a href="index.html">Meet Neo</a></li>
+			<li><a href="neo_finding.html">Finding Neo</a></li>
+			<li><a href="neo_weekly.html" class="submenu-title">Weekly Feeture</a>
+				<ul class="submenu">
+					<li><a href="#pet-of-week">Pet of the Week</a></li>
+					<li><a href="#submit-jump">Submit your Pet</a></li>
+				</ul>
+			</li>
+			<li><a href="../neo_calculator/neo_calculator.html">Age Calculator</a></li>
+		</ul>
+	</nav>
+	
+	</header>
+	<h1 id="pet-of-week">Pet of the Week</h1>
+	
+	<main>
+	<h3>Say hello to Whiskers</h3> 
+	<img src="weeklyCatPic.webp" class="weekly-pic">
+	
+	<h3>Whisker's favorite things:</h3>
+	<ul>
+		<li>An empty box</li>
+		<li>Shoelaces</li>
+		<li>Chin scratches</li>
+		<li>The kitchen counter</li>
+	</ul>
+	
+	<p>Whiskers was found at a shelter and was surrendered due to a hording situation. 
+	   Becky took one look at her and took her to her forever home.</p>
+	   
+	<article>
+		<h4>Fun Fact</h4>
+		<p>Whiskers has 6 toes! Known as a polydactyly.</p>
+	</article>
+	</main>
+	
+	
+	<h2 id""sumbit-jump">Want your pet featured?</h2>
+	
+	<!--Form with multiple fieldsets-->
+	<form id= "submit-form" action="test@example.com">
+		<fieldset id="pet-info">
+		
+			<!--input type: text-->
+			<!--Validate with required field-->
+			<label for="pet-name">What is yor pet's name?</label>
+			<input type="text" name="pet-name" id="pet-name" required/>
+			
+			<!--Selection list-->
+			<label for="type">>What animal is your pet?</label>
+			<select name="pet-type" id= "type">
+				<option value="type1">Cat</option>
+				<option value="type2">Dog</option>
+				<option value="type3">Rabbit</option>
+				<option value="type4">Fish</option>
+				<option value="type5">Goat</option>
+				<option value="type6">Other</option>
+			</select>
+			
+			<br/>
+			<div>
+			<!--Text Area (Formatting in format.css)-->
+			<label for="weekly-story">Share the story of your pet. Enter any details you would like. Eg. favorite foods, toys, funny quirks, unique attributes.</label>
+			<textarea name="pet-story" id="weekly-story"></textarea>
+			</div>
+			<br/>
+			
+			<!--input type: date/time-->
+			<label for="birth">What is your pet's Date of Birth></label>
+			<input type ="datetime-local" name="pet-dob" id="birth"/>
+			
+			<!--Spinner-->
+			<label>And/Or Years Old</label>
+			<input type="number" value="1" step="1" min="1" max="100">
+			
+			<!--checkboxes-->
+			<div id="qualities">
+			<label>What are some of your pet's qualities?</label>
+			
+			<br>
+			
+			<label for="quality1">Sleepy</label>
+			<input type="checkbox" id="quality1" value="Sleepy" />
+			
+			<label for="quality2">Sassy</label>
+			<input type="checkbox" id="quality2" value="Sassy" />
+			
+			<label for="quality3">Playful</label>
+			<input type="checkbox" id="quality3" value="Playful" />
+			
+			<label for="quality4">Sleepy</label>
+			<input type="checkbox" id="quality4" value="Cuddly" />
+			
+			<label for="quality5">Smart</label>
+			<input type="checkbox" id="quality5" value="Smart" />
+			</div>
+			
+			<!--Range Slider-->
+			<div id="range">
+				<label for="range-box">How is your pet's energy? <br/>
+					(0=Low; 10=High)</label>
+				<br/>
+				0
+				<input name="energy-level" id="range-box" type="range" value="1" step ="1" min ="0" max="10" />
+				10
+			</div>
+			
+		</fieldset>
+		
+		<fieldset id="owner-info">
+		
+			<!--one input that is set for a mobile keyboard type-->
+			<!--Validate with required field-->
+			<label for="email">Email</label>
+			<input type="email" name="owner-email" id="email" placeholder="email@email.com"required />
+			
+			<label for="phone">Phone Number</label>
+			<!--Validate data with pattern and field length-->
+			<input type="tel" name="owner-phone" id="phone" placeholder="(xxx)-xxx-xxxx" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$"/ maxlength="10" minlength="10" required>
+			
+			<label for="zip">Zipcode</label>
+			<input type="text" name="owner-zip" id="zip" pattern="^\d{5}(-\d{4})?$" maxlength="5" required/>
+			
+			<div class="form-row">
+				<label for="location">In what country are you located?</label>
+				<input name="pet-location" id="location" type="text"  list="countries"/>
+				
+				<!--datalist-->
+				<datalist id="countries">
+					<option value="United States">
+					<option value="United Kingdom">
+					<option value="France">
+					<option value="Spain">
+					<option value="China">
+					<option value="Italy">
+					<option value="Germany">
+					<option value="Dominican Republic">
+					<option value="Turkey">
+				</datalist>
+			</div>
+			
+			<div id="radio">
+				<!--Radio Buttons-->
+				<label>Do you want to subscribe to our newsletter?</label>
+				<label for="sub-yes">Yes</label>
+				<input id="sub-yes" name="sub" type="radio" value="yes"/>
+				<label for="sub-yes">No</label>
+				<input id="sub-no" name="sub" type="radio" value="no"/>
+			</div>
+		</fieldset>
+		
+		<!--submit and cancel button-->
+		<div id="submit-button">
+			<input type="submit" value="Submit" />
+			<input type="reset" value="Cancel" />
+		</div>
+	
+	</form>
+	
+</body>
+</html>

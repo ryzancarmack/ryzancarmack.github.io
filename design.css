@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+html {
+	background-color: #B8B8AA;
+	font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+	color: #586F6B;
+}
+
+h3 {
+	color: #262C27;
+	}
+	/*psudo*/
+a:visited {
+	color: blue;
+	
+}
+
+/*psudo for hyperlink*/
+ .navbar a:hover {
+	 color: #586F6B;
+	 
+ }
+ /*contextual class selector*/
+ .navbar a {
+	 color: #262C27;
+ }
+ 
+ /*floating element*/
+ /*floating layout*/
+ .feet-img {
+	 float: left;
+	 padding: 25px;
+ }
+ 
+ .blanket-img {
+	 float: right;
+	 padding: 25px;
+ }
+ 
+ .neo-story p {
+	 font-size: 30px;
+ }
+ 
+ /*This section is for the pulldown menu
+	Not responding as anticipated elements are
+	beside eachother and not on top
+	need to edit this to fully fulfill task as well as
+	it travel to correct spot on page. Not part of requirements*/
+ 
+ ul .submenu {
+	 display: none;
+	 
+ }
+ /*psudo class elements*/
+ /*block element*/
+li:hover .submenu {
+	display:block;
+}
+
+/*focus psudo class*/
+input:focus, select:focus, textarea:focus {
+	background-color: #DDD5D0;
+	
+}
+/*focus psudo class valid & invalid boxes*/
+#zip:focus:valid,
+#phone:focus:valid,
+#email:focus:valid {
+	background: #DDD5D0;
+}
+
+#zip:focus:invalid,
+#phone:focus:invalid,
+#email:focus:invalid {
+	background: #F4BABA;
+}
+

@@ -1,0 +1,96 @@
+/*format lists/background/text*/
+
+/*meta tag to create responsive website */
+@media screen and (max-width: 1000px) {
+	img {
+		height: 300px;
+		width: 200px;
+		
+	}
+}
+
+@media screen and (max-width: 600px) and (max-height: 600px) {
+	img {
+		height: 200;
+		width: 50px;
+	}
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+	position; fixed;
+}
+
+
+.navbar a {
+		text-decoration: none;
+}
+
+/*overflow*/
+.navbar ul {
+	list-style-type: none;
+	/*margin: 0;
+	padding: 0;*/
+	width: 50%;
+	overflow: hidden;
+	
+	
+}
+
+.navbar li {
+	float: left;
+	display: block;
+	/*padding-left: 15px; */
+
+}
+
+.navbar ul li {
+	float: left;
+	width: 20%;
+	
+}
+
+/*Grid layout*/
+.grid-pictures {
+	padding-left: 100px;
+	display: grid;
+	gap: 1.5rem;
+	grid-template-columns: 30% 30% 30%;
+	grid-column: 1 / 2;
+}
+
+
+.weekly-pic {
+	display: inline-block;
+}
+
+/*Format textarea*/
+textarea {
+	margin-top: 10px;
+	height: 100px;
+	width: 95%;
+}
+/*Relative positioning*/
+#weekly-story {
+	position: relative;
+	top:50%;
+	bottom:50%;
+}
+/*Absolute positioning*/
+#range {
+	position: absolute;
+	top: 25%;
+	left: 30%;
+}
+
+/*Responsie design using flexbox*/
+div#qualities {
+	display: flex;
+	flex-wrap: wrap;
+	flex-grow: 1;
+	flex-shrink: 3;
+}
