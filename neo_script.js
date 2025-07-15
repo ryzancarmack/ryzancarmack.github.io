@@ -9,7 +9,7 @@ setTimeout(function() {
 /*Create and call a JavaScript function that keeps track of the current day and time
 Create a date/time calculation in the same function as above*/
 function displayDay() {
-	var currentDay = new Date("July 12, 2025");
+	var currentDay = new Date();
 	var dateStr = currentDay.toLocaleDateString();
 	var timeStr = currentDay.toLocaleTimeString();
 	var nextYear = currentDay.getFullYear() + 1;
