@@ -83,8 +83,8 @@ textarea {
 /*Absolute positioning*/
 #range {
 	position: absolute;
-	top: 25%;
-	left: 30%;
+	bottom: -88%;
+	left: 80%;
 }
 
 /*Responsie design using flexbox*/
